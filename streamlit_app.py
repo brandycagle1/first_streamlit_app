@@ -30,7 +30,7 @@ def get_fruityvice_date(this_fruit_choice):
   fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
   fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
   return (fruityvice_normalized)
-  
+streamlit.stop()  
 # New section to display fruit advice
 streamlit.header("Fruityvice Fruit Advice!")
 try:
